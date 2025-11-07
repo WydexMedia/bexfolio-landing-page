@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bexfolio Educational | Financial Markets Education</title>
+    <meta
+      name="description"
+      content="Bexfolio Educational offers workshops and online classes to help students and professionals understand financial markets for educational purposes only."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #1d4ed8;
+        --primary-dark: #153eac;
+        --background: #f8fafc;
+        --text: #0f172a;
+        --muted: #475569;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background-color: var(--background);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(135deg, rgba(29, 78, 216, 0.9), rgba(29, 78, 216, 0.6)),
+          url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1600&q=80")
+            center/cover no-repeat;
+        color: var(--white);
+        padding: 96px 24px;
+        text-align: center;
+      }
+
+      header .content {
+        max-width: 768px;
+        margin: 0 auto;
+        background-color: rgba(15, 23, 42, 0.65);
+        padding: 32px;
+        border-radius: 16px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+      }
+
+      h1 {
+        font-size: clamp(2.25rem, 4vw, 3rem);
+        margin-bottom: 16px;
+      }
+
+      p.lead {
+        font-size: 1.125rem;
+        margin: 0;
+        color: rgba(248, 250, 252, 0.92);
+      }
+
+      main {
+        padding: 64px 24px;
+        max-width: 1040px;
+        margin: 0 auto;
+      }
+
+      section {
+        margin-bottom: 64px;
+        background-color: var(--white);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      }
+
+      section h2 {
+        font-size: 1.75rem;
+        margin-top: 0;
+        margin-bottom: 16px;
+        color: var(--primary);
+      }
+
+      section p {
+        margin-bottom: 16px;
+        color: var(--muted);
+      }
+
+      ul.learning-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 16px;
+      }
+
+      ul.learning-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px;
+        background-color: #eff6ff;
+        border-radius: 12px;
+        color: var(--text);
+      }
+
+      .check {
+        width: 24px;
+        height: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: var(--primary);
+        color: var(--white);
+        font-size: 14px;
+        flex: 0 0 auto;
+      }
+
+      .registration-section {
+        display: grid;
+        gap: 32px;
+      }
+
+      .registration-section .intro {
+        color: var(--muted);
+      }
+
+      form {
+        display: grid;
+        gap: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--text);
+      }
+
+      input,
+      button {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 10px;
+        border: 1px solid #cbd5f5;
+        font-size: 1rem;
+        font-family: inherit;
+      }
+
+      input {
+        background-color: #f8fbff;
+      }
+
+      input:focus {
+        outline: 2px solid rgba(29, 78, 216, 0.4);
+        border-color: var(--primary);
+        background-color: var(--white);
+      }
+
+      button {
+        background-color: var(--primary);
+        color: var(--white);
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+      }
+
+      button:hover,
+      button:focus {
+        background-color: var(--primary-dark);
+        transform: translateY(-1px);
+      }
+
+      .disclaimer {
+        font-size: 0.95rem;
+        color: var(--muted);
+        background-color: #e2e8f0;
+        border-left: 4px solid var(--primary);
+      }
+
+      footer {
+        padding: 48px 24px 64px;
+        background-color: #0f172a;
+        color: rgba(226, 232, 240, 0.92);
+        text-align: center;
+      }
+
+      footer p {
+        margin: 8px 0;
+      }
+
+      .contact-details {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+      }
+
+      .contact-details span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      @media (min-width: 768px) {
+        .registration-section {
+          grid-template-columns: 1fr 1fr;
+          align-items: start;
+        }
+
+        ul.learning-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding: 72px 16px;
+        }
+
+        section {
+          padding: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <h1>Learn How Financial Markets Work – 100% Educational Programs</h1>
+        <p class="lead">
+          Bexfolio Educational helps students and professionals understand the basics of financial
+          markets through workshops and online classes — purely for educational purposes.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section aria-labelledby="about-heading">
+        <h2 id="about-heading">About the Program</h2>
+        <p>
+          Our sessions are designed to teach financial literacy, market awareness, and risk management.
+        </p>
+        <p>
+          We focus on knowledge and skill development — not profit making or investment advice.
+        </p>
+        <p>
+          You’ll learn how markets function, how to read charts, and how to analyze trends safely.
+        </p>
+      </section>
+
+      <section aria-labelledby="learn-heading">
+        <h2 id="learn-heading">What You’ll Learn</h2>
+        <ul class="learning-list">
+          <li>
+            <span class="check" aria-hidden="true">✓</span>
+            <span>Understanding how global markets operate</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">✓</span>
+            <span>Basics of market analysis (for education only)</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">✓</span>
+            <span>Trading psychology and risk management concepts</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">✓</span>
+            <span>How to make informed decisions (not investment advice)</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="registration-section" aria-labelledby="registration-heading">
+        <div>
+          <h2 id="registration-heading">Workshop / Course Registration</h2>
+          <p class="intro">
+            Register now for our Free Workshop on Financial Education.
+          </p>
+        </div>
+        <form action="#" method="post">
+          <div>
+            <label for="full-name">Full Name</label>
+            <input id="full-name" name="full-name" type="text" placeholder="Your full name" required />
+          </div>
+          <div>
+            <label for="mobile-number">Mobile Number</label>
+            <input
+              id="mobile-number"
+              name="mobile-number"
+              type="tel"
+              inputmode="tel"
+              placeholder="Your mobile number"
+              required
+            />
+          </div>
+          <div>
+            <label for="city">City / Location</label>
+            <input id="city" name="city" type="text" placeholder="Your city or location" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <button type="submit">Join the Free Class</button>
+        </form>
+      </section>
+
+      <section class="disclaimer" aria-labelledby="disclaimer-heading">
+        <h2 id="disclaimer-heading">Disclaimer</h2>
+        <p>Bexfolio Educational provides training and educational programs only.</p>
+        <p>We do not offer investment, trading, or brokerage services.</p>
+        <p>All information shared in our sessions is for educational purposes only.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Bexfolio Educational</p>
+      <div class="contact-details" aria-label="Contact Information">
+        <span>📍 123 Learning Avenue, Kochi, Kerala 682001</span>
+        <span>📞 +91 98472 08345</span>
+        <span>✉️ bexfolioedu@gmail.com</span>
+      </div>
+    </footer>
+  </body>
+</html>
+
